@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+@use '../vars' as *;
+
+html {
+  font-size: 2.6667vw;
+
+  @include media-mobile {
+    // 375w - 16px, 768w - 20px
+    font-size: calc(4.2748px + 1.5267vw);
+  }
+
+  @include media-tablet {
+    // 768w - 16px, 1279w - 20px
+    font-size: calc(4px + 0.7812vw);
+  }
+
+  @include media-desktop {
+    font-size: 1.11111111vw;
+  }
+}
+
+body {
+  font-family: $font-family;
+}
+
+.default-link {
+  cursor: pointer;
+  transition: opacity $default-transition;
+
+  @include media-hover-device {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+@mixin new-font($family, $pathName, $weight, $style: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: '#{$family}';
+    font-style: $style;
+    font-weight: #{$weight};
+    src: url('/fonts/#{$pathName}.woff2') format('woff2');
+  }
+}
+
+@mixin media-hover-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin media-hover-device-self {
+  @include media-hover-device {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin media-mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin media-mobile-max {
+  @media (max-width: $max-mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin media-tablet-max {
+  @media (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin media-desktop-max {
+  @media (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin media-max-rems {
+  @media (min-width: $max-rems) {
+    @content;
+  }
+}
+
+@mixin text-clamp($lines) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  line-clamp: $lines;
+  -webkit-line-clamp: $lines;
+}
+
+@mixin increase-click-area($size: 4, $type:'before') {
+
+  @if $type == 'before' {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: -#{$size}px;
+    }
+  }
+  @if $type == 'after' {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: -#{$size}px;
+    }
+  }
+}

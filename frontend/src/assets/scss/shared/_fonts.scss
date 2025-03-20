@@ -1,0 +1,5 @@
+@use '../helpers/mixins' as *;
+
+@include new-font('Montserrat', 'Montserrat/Montserrat-Regular', 400);
+@include new-font('Montserrat', 'Montserrat/Montserrat-Medium', 500);
+@include new-font('Montserrat', 'Montserrat/Montserrat-SemiBold', 600);

@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  min-height: 1vw;
+}
+
+body {
+  overflow-y: scroll;
+  margin: 0;
+  min-width: 320px;
+  color: #000;
+  background-color: #fff;
+  backface-visibility: hidden;
+  line-height: 1.2;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+.button {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  backface-visibility: hidden;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &::placeholder {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+  }
+
+  &:-webkit-autofill {
+    background-clip: text;
+  }
+
+  &[type='number']::-webkit-inner-spin-button,
+  &[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+address {
+  font-style: normal;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: initial;
+  font-weight: normal;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+dt {
+  font-weight: 400;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
